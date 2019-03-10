@@ -119,6 +119,17 @@ body {
   color: #559f;
 }
 
+#conteudo-principal  a{
+  padding: 5px;
+  background-color: #CCC;
+  margin: 2px;
+}
+
+#conteudo-principal  a:hover {
+  background-color: #59f;
+  color: white;
+}
+
 
 #recentes {
   width: 26%;

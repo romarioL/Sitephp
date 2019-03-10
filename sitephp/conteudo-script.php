@@ -1,24 +1,42 @@
 <div id="conteudo-principal">
-  <h1 class="titulos"> Scripts CSS </h1>
+  <h1 class="titulos"> Página  de Scripts CSS </h1>
+  <?php
+  include "connect.php";
+
+  $sql = mysqli_query($link, "SELECT * FROM tb_postagens WHERE page = 2 ORDER BY id_post DESC;");
+
+  while($line = mysqli_fetch_array($sql)) {
+     $id = $line['id_post'];
+     $titulo = $line['titulo'];
+     $imagem = $line['imagem'];
+     $conteudo = $line['texto'];
+     $data = $line['data'];
+     $hora = $line['hr'];
+
+  ?>
   <div class="postagens">
-    <h1 class="titulos">Título da postagem</h1>
-    <img src="images/01.jpg" class="imagens">
-    <p class="paragrafos">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-    </p>
-    <span class="datas">03/04/1996</span>
+    <h1 class="titulos"><?php  echo $titulo; ?></h1>
+    <img src="postagens/<?php echo "post".$id."/".$imagem; ?>" class="imagens">
+    <p class="paragrafos"><?php  echo $conteudo; ?> </p>
+    <span class="datas"><?php echo date('d/m/Y', strtotime($data)); echo "<br>".date('H:i', strtotime($hora));?></span>
   </div>
-  <div class="postagens">
-    <h1 class="titulos">Título da postagem</h1>
-    <img src="images/01.jpg" class="imagens">
-    <p class="paragrafos">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-    </p>
-    <span class="datas">03/04/1996</span>
-  </div>
+<?php
+}
+ ?>
 </div>
 <div id="recentes">
   <h1 class="titulos">Recentes</h1>
   <div class="postagens-recentes">
-    <h1 class="titulos"><a href="#">Título dos arquivos  recentes</a></h1>
-    <span class="datas">03/04/1996</span>
+    <?php
+    $contar = 0;
+    $sql = mysqli_query($link, "SELECT * FROM tb_postagens WHERE page = 2 ORDER BY id_post DESC;");
+    while($line = mysqli_fetch_array($sql) and $contar < 5) {
+       $titulo = $line['titulo'];
+       $data = $line['data'];
+       $contar ++;
+     ?>
+    <h1 class="titulos"><a href="#"><?php echo $titulo; ?></a></h1>
+    <span class="datas"><?php echo date('d/m/Y', strtotime($data)); ?></span>
+  <?php  } ?>
   </div>
 </div>

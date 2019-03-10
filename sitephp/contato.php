@@ -13,7 +13,7 @@
       </div>
      <div id="conteudo">
       <form action="cadContato.php" method="POST">
-        <br></br>connect
+        <br></br>
         <label class="legenda">Nome</label><br>
         <input type="text" class="campos" name="nome" placeholder="Digite seu nome" required> <br>
         <label class="legenda">E-mail</label><br>
