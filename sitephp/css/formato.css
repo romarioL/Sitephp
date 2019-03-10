@@ -1,0 +1,205 @@
+*{
+  padding: 0;
+  margin: 0;
+  font-size: 18px;
+  text-decoration: none;
+  color: #333;
+  list-style: none;
+}
+body {
+  background-color: #111;
+  font-family: sans-serif;
+}
+#geral {
+  max-width: 1200px;
+  height: auto;
+  overflow:hidden;
+  margin: 0 auto;
+}
+#topo {
+  width: 100%;
+  height: 200px;
+  float: left;
+  background-color: #DDF;
+}
+
+.logo {
+ width: 100px;
+ height:auto;
+ float: left;
+ margin: 20px;
+}
+
+.links-top {
+ float: right;
+ padding: 10px;
+ margin: 5px 2px;
+ background-color: #145;
+ color: #FFF;
+}
+
+.links-top:hover {
+  background-color: #59f;
+}
+
+#menu {
+  width: 100%;
+  height: 50px;
+  float: left;
+  background-color: #145;
+}
+
+.links-menu li a {
+   float: left;
+   padding: 16px;
+   background-color: #145;
+   color: #FFF;
+}
+
+.links-menu li a:hover {
+  background-color: #59f;
+}
+
+#conteudo {
+  width: 100%;
+  min-height: 300px;
+  float: left;
+  background-color: #FFF;
+  padding-bottom: 20px;
+}
+
+#conteudo-principal {
+  width: 70%;
+  min-height: 600px;
+  float: left;
+  margin: 20px 10px;
+}
+
+.postagens {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  float: left;
+  margin: 10px 0 30px  0;
+}
+
+.titulos {
+  font-size: 20px;
+  font-family: sans-serif;
+  float: left;
+  width: 96%;
+  margin: 10px 2%;
+}
+
+.imagens{
+  width: 100%;
+  height: auto;
+  float: left;
+  margin: 5px 0;
+}
+
+.paragrafos, .datas {
+  font-size: 16px;
+  color: #333;
+  float: left;
+  width: 96%;
+  font-family: sans-serif;
+  margin: 10px 2%;
+}
+
+.postagens-recentes {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  float: left;
+  margin: 10px 0 30px  0;
+}
+
+.titulos a:hover {
+  color: #559f;
+}
+
+
+#recentes {
+  width: 26%;
+  min-height: 600px;
+  float: left;
+  margin: 20px 10px;
+}
+
+.campos, .campos-cad, #botoes, .botoes {
+  width: 80%;
+  margin: 10px 10%;
+  min-height: 30px;
+  float: left;
+  padding: 2px;
+  font-size: 16px;
+}
+
+.campo2 {
+  width: 80%;
+  margin: 10px 10%;
+  min-height: 150px;
+  float: left;
+  padding: 2px;
+  font-size: 16px;
+}
+
+.bt-contato {
+  float: left;
+  margin-left: 10%;
+  padding: 5px;
+  font-size: 16px;
+}
+
+.legenda {
+  float: left;
+  margin-left: 10%;
+  font-size: 16px;
+}
+
+#form-box, #log-box {
+  width: 80%;
+  min-height: 300px;
+  background-color: #FFF;
+  margin: 40px auto;
+  overflow: hidden;
+
+}
+
+.bt-cad {
+  float:left;
+  font-size: 16px;
+  padding: 5px;
+  margin-right: 5px;
+}
+
+.form-link {
+  color: #59F;
+  font-size: 16px;
+  float: left;
+}
+
+.p-form {
+  color: #333;
+  font-size: 16px;
+  float: left;
+  width: 100%;
+}
+
+#rodape {
+  width: 100%;
+  height: 50px;
+  float: left;
+  background-color: #DDF;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.direitos {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  font-size: 18px;
+}
